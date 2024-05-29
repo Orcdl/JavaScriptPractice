@@ -1,12 +1,20 @@
-let myArray = [1,2,3,4,5];
+const { filterEvenNumber,
+      covertoEvenNumber,
+      sortNumberASC } = require('../utils/ArrayHelper');
 
-let MyEvenNumber = myArray.filter(filterEvenNumber);
+let myNumberArray = [1, 2, 3, 4, 5];
+let ComplexNumArry = [100,22,19];
 
-function filterEvenNumber(value,index,array){
-    console.log("processing at index:",index);
-    return value % 2 === 0;
-}
-for (const value of MyEvenNumber) {
+ComplexNumArry.sort(sortNumberASC);
+
+
+let evenNumbers = myNumberArray.filter(filterEvenNumber);
+
+myNumberArray.map(covertoEvenNumber);
+
+for (const value of myNumberArray) {
     console.log(value);
-    console.log(myArray);
+    console.log(myNumberArray);
 }
+
+console.log(ComplexNumArry);
